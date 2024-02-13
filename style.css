@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.main {
+  min-height: 100dvh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(145deg, #dbc1ea, #b9a2c5);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+}
+
+.inputbox {
+  border-radius: 50px;
+  background: #cdb4db;
+  box-shadow: inset 20px 20px 60px #ae99ba, inset -20px -20px 60px #eccffc;
+  border: none;
+  padding: 50px;
+  width: 85%;
+  height: 30%;
+  font-size: 48px;
+  background: #cdb4db;
+  color: antiquewhite;
+  border-radius: 30px;
+  outline: none;
+  transition: 10s;
+}
+
+.mainbox {
+  border-radius: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.photos {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin: 50px;
+}
+
+.photo {
+  width: 350px;
+  height: 220px;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+.photo:hover {
+  box-shadow: 0px 0px 40px 0 #9e81ad;
+  cursor: pointer;
+}
+
+.modal__container {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.7s background;
+}
+
+.modal__container.active {
+  pointer-events: all;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.modal {
+  width: 950px;
+  height: 600px;
+  background: #bde0fe;
+  border-radius: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  transform: translateY(100vh);
+  transition: 0.7s;
+  gap: 100px;
+}
+
+.modal__container.active .modal {
+  transform: translateY(0vh);
+}
+
+.photo__modal {
+  width: 400px;
+  height: 300px;
+  border-radius: 30px;
+  transition: 0.5s;
+  object-fit: cover;
+}
+
+.photo__modal:hover {
+  box-shadow: 0px 0px 40px 0 #9e81ad;
+}
+
+.modal__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.button {
+  border: none;
+  border-radius: 20px;
+  height: 50px;
+  width: 250px;
+  transition: 0.5s;
+}
+
+.close-button {
+  border-radius: 50px;
+  background: #bde0fe;
+  box-shadow: 20px 20px 60px #a1bed8, -20px -20px 60px #d9ffff;
+}
+
+.open-button {
+  border-radius: 50px;
+  background: #bde0fe;
+  box-shadow: 20px 20px 60px #a1bed8, -20px -20px 60px #d9ffff;
+}

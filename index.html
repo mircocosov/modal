@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="main">
+        <div class="header">
+          <input type="text" class="inputbox" />
+        </div>
+        <div class="mainbox">
+          <div class="photos">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2B4-vTV7F6tb4y1-MwTTq70JyrL1GyX9XGQ&usqp=CAU"
+              alt="first photo"
+              class="photo"
+              onclick="openModal()"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL95E2AI3UMNYgyOh4I96tKT9csvxt6n-kZA&usqp=CAU"
+              alt="second photo"
+              class="photo"
+              onclick="openModal()"
+            />
+          </div>
+        </div>
+        <div class="modal__container">
+          <div class="modal">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sDXd9tivSUqEphKFbXbF7LuVq1pCrpYEcQ&usqp=CAU"
+              alt="photo in modalbox"
+              class="photo__modal"
+            />
+            <div class="modal__buttons">
+              <button class="button open-button">Open</button>
+              <button class="button close-button" onclick="closeModal()">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="js.js"></script>
+</html>
